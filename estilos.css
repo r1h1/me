@@ -1,0 +1,300 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fff;
+    font-family: "Roboto", sans-serif;
+}
+
+/* TODO EL CONTAINER DE LA WEB */
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* HEADER */
+header {
+    background: url('rickanmorty.png');
+    background-repeat: no-repeat;
+    height: 800px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+header .menu {
+    text-align: center;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+header .menu a {
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 17px;
+    font-size: 1.2em;
+    margin-left: 60px;
+}
+
+header .menu a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+header .menu a.active {
+    color: white;
+}
+
+header .menu .icon {
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+    header .menu a:not(:first-child) {
+        display: none;
+    }
+
+    header .menu a.icon {
+        float: right;
+        display: block;
+    }
+
+    header .menu.responsive {
+        position: fixed;
+    }
+
+    header .menu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    header .menu.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        font-size: 1.2em;
+    }
+}
+
+header .contenedor-texto {
+    display: flex;
+    margin: 190px 0;
+    justify-content: center;
+    align-content: center;
+}
+
+header .contenedor-texto .texto {
+    display: inline-block;
+    text-align: center;
+    padding: 20px 60px;
+}
+
+header .contenedor-texto .texto h1,
+header .contenedor-texto .texto h2 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 100px;
+    margin: 0;
+}
+
+header .contenedor-texto .texto h1:hover,
+header .contenedor-texto .texto h2:hover {
+    color: #490086;
+    font-weight: 700;
+    font-size: 100px;
+    margin: 0;
+}
+
+/* MAIN */
+.main .contenedor {
+    overflow: visible;
+}
+
+.main .acerca-de {
+    text-align: center;
+}
+
+.main .acerca-de .foto {
+    margin-top: -60px;
+}
+
+.main .acerca-de .texto {
+    color: #000000;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    width: 80%;
+    margin: 40px auto 100px auto;
+}
+
+.titulo {
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+.boton-cv {
+    padding: 20px 30px;
+    border: 2px solid;
+    text-decoration: none;
+    color: #000;
+}
+
+.boton-cv:hover {
+    padding: 20px 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+}
+
+/* TRABAJOS */
+
+.main .trabajos {
+    background-color: #f2f2f2;
+    padding: 60px 0;
+}
+
+.main .trabajos .contenedor {
+    overflow: hidden;
+}
+
+.main .trabajos .contenedor .titulo-trabajos {
+    font-size: 42px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.main .trabajos .contenedor-trabajosweb {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main .trabajos .contenedor-trabajosweb .trabajo {
+    width: 33%;
+    margin-bottom: 40px;
+}
+
+.main .trabajos .contenedor-trabajosweb .trabajo .thumb {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.main .trabajos .contenedor-trabajosweb .trabajo .thumb img {
+    width: 100%;
+    vertical-align: top;
+    padding: 5px;
+}
+
+.main .trabajos .contenedor-trabajosweb .trabajo .descripcion {
+    text-align: center;
+}
+
+.main .trabajos .contenedor-trabajosweb .trabajo .descripcion .nombre {
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.main .trabajos .contenedor-trabajosweb .trabajo .descripcion .categoria {
+    font-size: 14px;
+}
+
+
+
+/* FOOTER Y CONTACTO */
+footer .contacto {
+    padding: 60px 0;
+}
+
+footer .contacto .titulo-tproyecto {
+    font-size: 42px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+footer .boton-empieza {
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 2px solid;
+    text-decoration: none;
+    color: #000;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .boton-empieza:hover {
+    padding: 20px 30px;
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+}
+
+/* FOOTER SOCIAL */
+
+footer .redes {
+    background-color: #000;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+    padding: 17px 0;
+}
+
+@media screen and (max-width: 859px) {
+    .main .trabajos .contenedor-trabajosweb .trabajo {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 504px) {
+
+    header .contenedor-texto .texto h1,
+    header .contenedor-texto .texto h2 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 75px;
+        margin: 0;
+    }
+
+    header .contenedor-texto .texto h1:hover,
+    header .contenedor-texto .texto h2:hover {
+        color: #490086;
+        font-weight: 700;
+        font-size: 75px;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 372px) {
+
+    header .contenedor-texto .texto h1,
+    header .contenedor-texto .texto h2 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 60px;
+        margin: 0;
+    }
+
+    header .contenedor-texto .texto h1:hover,
+    header .contenedor-texto .texto h2:hover {
+        color: #490086;
+        font-weight: 700;
+        font-size: 60px;
+        margin: 0;
+    }
+}
